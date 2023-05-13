@@ -1,25 +1,43 @@
-// color
-$black: #000000;
-$white: #fff;
-$whiteText: #fdfdfd;
-$textPlaceholder: #acacac;
-$whiteTextDisabled: #c7c6c6;
-$bordedBtn: #c7c6c6;
-$navbarBg: #f5f5f5;
-$btnBg: #f4f4f4;
-$btnBgHover: #d1d1d1;
-$footerText: #868686;
+:root {
+  /* Colors */
+  --blackpure: #000;
+  --black: #171718;
+  --black-border: #26292d;
+  --white: #fff;
+  --purple: #5c62ec;
 
-//padding
-$pad5: 5px;
-$pad12: 12px;
-$pad16: 16px;
-$pad40: 40px;
-$pad60: 60px;
+  /* Nav */
+  --nav-bg: var(--black);
+  --nav-border: var(--black-border);
+  --nav-text: var(--white);
 
-//margin
-$mar5: 5px;
-$mar12: 12px;
-$mar16: 16px;
+  /* Header */
+  --header-bg: var(--black);
+  --header-text: var(--white);
 
-//gap
+  /* Footer */
+  --footer-bg: var(--black);
+  --footer-text: var(--white);
+
+  /* Light mode */
+  --page-bg: var(--white);
+  --text-color: var(--black);
+  --accent: var(--purple);
+  --title-1: var(--accent);
+
+  --project-card-bg: var(--white);
+  --project-card-text: var(--black);
+  --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark mode */
+.dark {
+  --page-bg: #252526;
+  --text-color: var(--white);
+
+  --title-1: var(--white);
+
+  --project-card-bg: var(--black);
+  --project-card-text: var(--white);
+  --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+}

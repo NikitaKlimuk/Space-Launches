@@ -7,6 +7,7 @@ import { RootState } from "../../redux/store";
 const MainPage = () => {
   const dispatch: ThunkDispatch<any, void, any> = useDispatch();
   const launches = useSelector((state: RootState) => state.launches.launches);
+
   useEffect(() => {
     dispatch(fetchAllLaunches());
   }, [dispatch]);
