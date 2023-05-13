@@ -1,4 +1,4 @@
-@import "./styles/variables.scss";
+@import "variables.scss";
 
 * {
   margin: 0;
@@ -35,35 +35,35 @@ p {
 
 @font-face {
   font-family: "Quicksand";
-  src: url(./fonts/quicksand/Quicksand-Light.ttf);
+  src: url(./../fonts/quicksand/Quicksand-Light.ttf);
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url(./fonts/quicksand/Quicksand-Regular.ttf);
+  src: url(./../fonts/quicksand/Quicksand-Regular.ttf);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url(./fonts/quicksand/Quicksand-Medium.ttf);
+  src: url(./../fonts/quicksand/Quicksand-Medium.ttf);
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url(./fonts/quicksand/Quicksand-SemiBold.ttf);
+  src: url(./../fonts/quicksand/Quicksand-SemiBold.ttf);
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url(./fonts/quicksand/Quicksand-Bold.ttf);
+  src: url(./../fonts/quicksand/Quicksand-Bold.ttf);
   font-weight: 700;
   font-style: normal;
 }
