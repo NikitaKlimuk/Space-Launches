@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer__wrapper">
-          <div className="special">Test work for "Ester Digita"</div>
+          <div className="special">Test work for "Ester Digital"</div>
           <div className="copyright">
             <p>© 2023 Mikita Klimuk</p>
           </div>
