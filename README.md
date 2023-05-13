@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Space Launch React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based web application that uses the Launch Library 2 API to display information about space shuttle launches and beyond. Users can view detailed information about a particular launch.
 
-## Available Scripts
+Preview: [https://space-launches-gamma.vercel.app/]
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+This project uses the following technologies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`Typescript`
+`React`
+`Redux`
+`Redux-toolkit`
+`React Router`
+`React Paginate`
+`SCSS`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Timing
+The project was completed in a short and fixed amount of time (4 hours)
+With more time, I would devote my attention to improving the next points:
+- Adding filtering (react hook form connection)
+- A HERO section on the home page (before the pagination) with a picture of the rocket launch and a small description of the project.
+- More detailed work with typo.
+- Adding components in case of errors from the server.
+- Create media file for full optimization for all devices.
+- More detailed work with styles and dark theme.
+- Extension of details page (output more information about launching).
+- Improvement of skeleton styles
 
-### `npm test`
+## Install dependencies with npm install
+Start the application with **npm start**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Preview 
+### Main page with pagination
+![main page](https://github.com/NikitaKlimuk/Space-Launches/assets/44801567/c0b58592-9fde-4ea1-8ac8-08325bab9cd5)
+![main page bootom](https://github.com/NikitaKlimuk/Space-Launches/assets/44801567/a757f315-1ff3-4691-8286-177135b16abf)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Details page (whith selected card)
+![details page](https://github.com/NikitaKlimuk/Space-Launches/assets/44801567/e5751eb6-d20c-4bd0-a1bc-2467d1869620)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
