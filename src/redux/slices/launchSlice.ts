@@ -17,9 +17,11 @@ const initialState: LaunchState = {
 
 export const fetchAllLaunches = createAsyncThunk(
   "launches/fetchAllLaunches",
-  async function (_, { rejectWithValue }) {
+  async function (currentPage: number, { rejectWithValue }) {
     try {
-      const response = await fetch(`${apiBase.dev}2.2.0/launch/`);
+      const response = await fetch(
+        `${apiBase.dev}2.2.0/launch/?offset=${currentPage}&limit=10`
+      );
 
       if (!response.ok) {
         throw new Error("ServerError!");

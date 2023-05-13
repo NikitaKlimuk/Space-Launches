@@ -43,7 +43,7 @@ const DetailsPage = () => {
               Rocket launch date: {formatDate(launch.net)}
             </div>
             <div className="detailsPage__wrapper-company">
-              Company name: {launch.launch_service_provider?.name}
+              Company name: {launch?.launch_service_provider?.name}
             </div>
             <div className="detailsPage__wrapper-total">
               Total launches: {launch?.orbital_launch_attempt_count}
