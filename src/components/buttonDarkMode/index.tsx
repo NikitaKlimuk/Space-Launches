@@ -5,7 +5,7 @@ import sun from "../../assets/icons/sun.svg";
 import moon from "../../assets/icons/moon.svg";
 import "./styles.scss";
 
-const ButtonDarkMode = () => {
+const ButtonDarkMode: React.FC = () => {
   const [darkMode, setDarkMode] = useLocalStorage("darkMode", detectDarkMode());
 
   useEffect(() => {

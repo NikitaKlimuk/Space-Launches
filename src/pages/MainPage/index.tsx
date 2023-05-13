@@ -5,9 +5,9 @@ import { fetchAllLaunches } from "../../redux/slices/launchSlice";
 import { ThunkDispatch } from "@reduxjs/toolkit";
 import { RootState } from "../../redux/store";
 import LaunchCart from "../../components/launchCart";
-import "./styles.scss";
 import Skeleton from "../../components/skeleton";
 import Pagination from "../../components/paginate";
+import "./styles.scss";
 
 const MainPage = () => {
   const dispatch: ThunkDispatch<any, void, any> = useDispatch();
@@ -17,13 +17,10 @@ const MainPage = () => {
   const { status, error } = useSelector((state: RootState) => state.launches);
 
   const [currentPage, setCurrentPage] = useState<number>(1);
-  console.log(currentPage);
 
   useEffect(() => {
     dispatch(fetchAllLaunches(currentPage));
   }, [dispatch, currentPage]);
-
-  console.log(launches);
 
   return (
     <>

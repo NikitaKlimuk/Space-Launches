@@ -5,10 +5,9 @@ import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { fetchLaunch } from "../../redux/slices/launchSlice";
 import formatDate from "../../utils/formatDate";
-
-import "./styles.scss";
 import leftIcon from "../../assets/icons/left.svg";
 import SkeletonBig from "../../components/skeletonBig";
+import "./styles.scss";
 
 const DetailsPage = () => {
   const dispatch: ThunkDispatch<any, void, any> = useDispatch();
@@ -27,7 +26,7 @@ const DetailsPage = () => {
       {status === "loading" && <SkeletonBig />}
       {error && <h2>An error occured: {error}</h2>}
 
-      {launch.image ? (
+      {status === "resolved" && (
         <>
           <button className="back__button" onClick={() => navigate(-1)}>
             <img src={leftIcon} alt="back to main page button" />
@@ -50,7 +49,7 @@ const DetailsPage = () => {
             </div>
           </div>
         </>
-      ) : null}
+      )}
     </section>
   );
 };

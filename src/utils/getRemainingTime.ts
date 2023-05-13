@@ -1,9 +1,4 @@
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
+import { TimeLeft } from "../interfaces/timeLeft";
 
 const getRemainingTime = (time: any): TimeLeft => {
   const difference = +new Date(time) - +new Date();
