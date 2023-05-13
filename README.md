@@ -2,7 +2,7 @@
 
 This project is a React-based web application that uses the Launch Library 2 API to display information about space shuttle launches and beyond. Users can view detailed information about a particular launch.
 
-Preview: [https://space-launches-gamma.vercel.app/](https://dev-portfolio-vert-gamma.vercel.app/](https://space-launches-gamma.vercel.app/)
+Preview: [space-launches-gamma.vercel.app](https://dev-portfolio-vert-gamma.vercel.app/](https://space-launches-gamma.vercel.app/)
 
 ## Technologies Used
 
