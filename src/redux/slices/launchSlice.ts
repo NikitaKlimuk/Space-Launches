@@ -3,12 +3,14 @@ import apiBase from "../api";
 
 export interface LaunchState {
   launches: any;
+  launch: any;
   status: "idle" | "loading" | "resolved" | "rejected";
   error: any;
 }
 
 const initialState: LaunchState = {
   launches: [],
+  launch: {},
   status: "idle",
   error: null,
 };
@@ -33,7 +35,7 @@ export const fetchAllLaunches = createAsyncThunk(
 
 export const fetchLaunch = createAsyncThunk(
   "launches/fetchLaunch",
-  async function (id: string, { rejectWithValue }) {
+  async function (id: string | undefined, { rejectWithValue }) {
     try {
       const response = await fetch(`${apiBase.dev}2.2.0/launch/${id}`);
 
@@ -57,6 +59,7 @@ export const launchSlice = createSlice({
     builder
       .addCase(fetchAllLaunches.pending, (state) => {
         state.status = "loading";
+        state.launches = [];
         state.error = null;
       })
       .addCase(fetchAllLaunches.fulfilled, (state, action) => {
@@ -70,11 +73,12 @@ export const launchSlice = createSlice({
     builder
       .addCase(fetchLaunch.pending, (state) => {
         state.status = "loading";
+        state.launch = {};
         state.error = null;
       })
       .addCase(fetchLaunch.fulfilled, (state, action) => {
         state.status = "resolved";
-        state.launches = action.payload;
+        state.launch = action.payload;
       })
       .addCase(fetchLaunch.rejected, (state, action) => {
         state.status = "rejected";

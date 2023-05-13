@@ -10,6 +10,7 @@ import "./styles.scss";
 const MainPage = () => {
   const dispatch: ThunkDispatch<any, void, any> = useDispatch();
   const launches = useSelector((state: RootState) => state.launches.launches);
+
   const data = launches.results;
   const { status, error } = useSelector((state: RootState) => state.launches);
 

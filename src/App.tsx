@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import Navbar from "./components/navbar";
 import "./styles/App.scss";
+import DetailsPage from "./pages/DetailsPage";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<MainPage />} />
-          {/* <Route path="/:id" element={<DetailsPage />} /> */}
+          <Route path="/:id" element={<DetailsPage />} />
         </Routes>
       </main>
       {/* <Footer /> */}
