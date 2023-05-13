@@ -8,6 +8,7 @@ import formatDate from "../../utils/formatDate";
 
 import "./styles.scss";
 import leftIcon from "../../assets/icons/left.svg";
+import SkeletonBig from "../../components/skeletonBig";
 
 const DetailsPage = () => {
   const dispatch: ThunkDispatch<any, void, any> = useDispatch();
@@ -23,7 +24,7 @@ const DetailsPage = () => {
 
   return (
     <section className="detailsPage">
-      {status === "loading" && <h2>Loading...</h2>}
+      {status === "loading" && <SkeletonBig />}
       {error && <h2>An error occured: {error}</h2>}
 
       {launch.image ? (

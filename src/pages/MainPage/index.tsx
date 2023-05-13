@@ -6,6 +6,7 @@ import { ThunkDispatch } from "@reduxjs/toolkit";
 import { RootState } from "../../redux/store";
 import LaunchCart from "../../components/launchCart";
 import "./styles.scss";
+import Skeleton from "../../components/skeleton";
 
 const MainPage = () => {
   const dispatch: ThunkDispatch<any, void, any> = useDispatch();
@@ -18,11 +19,15 @@ const MainPage = () => {
     dispatch(fetchAllLaunches());
   }, [dispatch]);
 
-  console.log(launches.results);
-
   return (
     <section className="mainPage">
-      {status === "loading" && <h2>Loading...</h2>}
+      {status === "loading" && (
+        <>
+          {[...Array(10)].map((_, index) => (
+            <Skeleton key={index} />
+          ))}
+        </>
+      )}
       {error && <h2>An error occured: {error}</h2>}
 
       {data?.map((item: any) => {
