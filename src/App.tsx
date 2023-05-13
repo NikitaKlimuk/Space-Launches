@@ -3,6 +3,7 @@ import MainPage from "./pages/MainPage";
 import Navbar from "./components/navbar";
 import "./styles/App.scss";
 import DetailsPage from "./pages/DetailsPage";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route path="/:id" element={<DetailsPage />} />
         </Routes>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </section>
   );
 }
