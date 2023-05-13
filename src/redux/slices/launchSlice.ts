@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import apiBase from "../api";
 
 export interface LaunchState {
-  launches: object;
+  launches: any;
   status: "idle" | "loading" | "resolved" | "rejected";
   error: any;
 }

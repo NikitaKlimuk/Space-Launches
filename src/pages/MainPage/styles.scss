@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.mainPage {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  column-gap: 30px;
+  row-gap: 30px;
+}
