@@ -32,7 +32,17 @@ const Pagination: React.FC<IPagination> = ({
         />
       </div>
 
-      <div className="paginate__input">Showing {totalPage - 1} results</div>
+      <div className="paginate__input">
+        Select page
+        <input
+          type="number"
+          autoComplete="off"
+          defaultValue={currentPage}
+          onBlur={(event) => setCurentPage(+event.target.value)}
+          min="0"
+        />
+        Showing {totalPage - 1} results
+      </div>
     </div>
   );
 };
