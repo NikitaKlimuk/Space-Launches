@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ILaunchCart } from "../../interfaces/launchCart";
 import getRemainingTime from "../../utils/getRemainingTime";
 import "./styles.scss";
-import { useEffect, useState } from "react";
 
 const LaunchCart: React.FC<ILaunchCart> = ({
   img,
@@ -53,11 +53,15 @@ const LaunchCart: React.FC<ILaunchCart> = ({
       <li>
         <img src={img} alt={name} className="launchCart__img" />
         <h3 className="launchCart__name">{name}</h3>
-        <h4 className="launchCart__descr">{description}</h4>
-        <div className="launchCart__time">
-          Time To Launch: {timer.days} days, {timer.hours} hours,{" "}
-          {timer.minutes} minutes, {timer.seconds} seconds
-        </div>
+        {description ? (
+          <h4 className="launchCart__descr">{description}</h4>
+        ) : null}
+        {timer.minutes ? (
+          <div className="launchCart__time">
+            Time To Launch: {timer.days} days, {timer.hours} hours,{" "}
+            {timer.minutes} minutes, {timer.seconds} seconds
+          </div>
+        ) : null}
       </li>
     </div>
   );

@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .detailsPage {
+  min-height: 80vh;
   margin-bottom: 40px;
   .back__button {
     padding: 8px;
@@ -16,6 +17,11 @@
     width: 80%;
     margin: 0 auto;
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    img {
+      margin: 0 auto;
+    }
     &-title {
       font-size: 40px;
       font-weight: 400;

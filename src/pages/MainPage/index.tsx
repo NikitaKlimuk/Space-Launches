@@ -7,6 +7,7 @@ import { RootState } from "../../redux/store";
 import LaunchCart from "../../components/launchCart";
 import Skeleton from "../../components/skeleton";
 import Pagination from "../../components/paginate";
+import rockerLaunch from "../../assets/img/rockerLaunch.jpg";
 import "./styles.scss";
 
 const MainPage = () => {
@@ -25,7 +26,7 @@ const MainPage = () => {
   return (
     <>
       {status === "loading" && (
-        <section className="mainPage">
+        <section className="mainPage skeletons">
           {[...Array(10)].map((_, index) => (
             <Skeleton key={index} />
           ))}
@@ -49,8 +50,8 @@ const MainPage = () => {
                   <LaunchCart
                     name={item.name}
                     id={item.id}
-                    img={item.image}
-                    description={item.mission.description}
+                    img={item.image ?? rockerLaunch}
+                    description={item?.mission?.description}
                     net={item.window_start}
                   />
                 </React.Fragment>

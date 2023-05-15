@@ -7,6 +7,7 @@ import { fetchLaunch } from "../../redux/slices/launchSlice";
 import formatDate from "../../utils/formatDate";
 import leftIcon from "../../assets/icons/left.svg";
 import SkeletonBig from "../../components/skeletonBig";
+import rockerLaunch from "../../assets/img/rockerLaunch.jpg";
 import "./styles.scss";
 
 const DetailsPage = () => {
@@ -33,7 +34,7 @@ const DetailsPage = () => {
             Back
           </button>
           <div className="detailsPage__wrapper">
-            <img src={launch.image} alt={launch.name}></img>
+            <img src={launch.image ?? rockerLaunch} alt={launch.name}></img>
             <div className="detailsPage__wrapper-title">{launch.name}</div>
             <div className="detailsPage__wrapper-descr">
               {launch.mission?.description}
